@@ -1,0 +1,471 @@
+.juego {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 400px;
+  width: 400px;
+  font-size: 3em;
+  text-align: center;
+  padding: 15px;
+  border: 4px rgb(255, 255, 255) solid;
+  margin-left: 1.75em;
+  cursor:pointer;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(98, 0, 255), rgb(0, 195, 255));
+}
+
+.container {
+  margin-top: 2em;
+  /* background-color: rgb(208, 255, 0); */
+}
+
+.contenedorPrincipal {
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(7, 129, 24);
+}
+
+.contenedorp1,
+.contenedorp2 {
+  border: 4px rgb(255, 255, 255) solid;
+  text-align: center;
+  margin-top: 2em;
+  color: rgb(248, 248, 248);
+  height: 410px;
+  background: linear-gradient(180deg, rgb(98, 0, 255), rgb(0, 195, 255));
+}
+
+.imagenJugador {
+  width: 70%;
+  height: 70%;
+}
+
+.contenedorp2 {
+  margin-right: 6em;
+}
+
+.contenedorp1 {
+  margin-left: 6em;
+}
+
+.piedejuego {
+  text-align: center;
+}
+
+.titulo, .tituloInicio{
+  width: 80%;
+  text-align: center;
+  font-size: 3em;
+  color: rgb(34, 1, 77);
+}
+
+#imagen {
+  width: 8%;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  border: 3px solid rgb(70, 3, 66);
+  height: 50px;
+}
+
+.titulo,
+#imagen {
+  display: inline-block;
+}
+
+#titulo {
+  background: linear-gradient(90deg, rgb(98, 0, 255), rgb(0, 195, 255));
+}
+
+.puntaje1,
+.puntaje2 {
+  margin-top: 2em;
+  font-size: 2em;
+}
+
+.datosnum {
+  color: rgb(245, 208, 0);
+}
+
+.bordes {
+  line-height: 100px;
+  color: wheat;
+}
+
+.centro,
+.num2,
+.num8 {
+  border-left: 4px rgb(255, 255, 255) solid;
+  border-right: 4px rgb(255, 255, 255) solid;
+}
+
+.num1,
+.num2,
+.num3 {
+  border-bottom: 4px white solid;
+}
+
+.num7,
+.num8,
+.num9 {
+  border-top: 4px white solid;
+}
+
+
+.rojo {
+  color: rgb(255, 0, 0);
+}
+
+.notificacion {
+  color: rgb(46, 255, 4);
+  font-size: 2em;
+  text-align: center;
+}
+
+#j1,
+#j2 {
+  font-size: 3em;
+  color: rgb(255, 255, 255);
+}
+
+.verde {
+  color: rgb(0, 248, 12);
+}
+
+.reiniciar,
+.nuevoJuego, .cerrar {
+  margin-top: 10px;
+  border-radius: 25px;
+  padding: 2px 20px;
+  background-color: rgb(231, 191, 10);
+}
+
+.reiniciar:hover {
+  background-color: rgb(39, 5, 131);
+  color: aqua;
+  font-weight: bold;
+}
+
+.nuevoJuego:hover {
+  background-color: rgb(238, 176, 7);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.wait{
+  height: 60%;
+  width: 60%;
+}
+
+.cambioLetra{
+  font-size: 10px;
+}
+
+.win{
+  height: 170px;
+  width: 170px;
+  margin: -1em 3.5em -3em 3.5em; 
+}
+
+.mensaje{
+  justify-items: center;
+}
+
+.instrucciones{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: wheat;
+  width: 50%;
+  text-align:justify ;
+}
+
+.botonInicio{
+  width: 60%;
+  height: 60%;
+  border: 3px solid rgb(69, 3, 99);
+}
+
+#imagen, .tituloInicio{
+  display: inline-block;
+}
+
+.animacion{
+position: fixed;
+z-index: 1000;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.9);
+top: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+visibility: hidden;
+}
+
+.modalJ{
+  width: 60%;
+  height:70%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px;
+  position: absolute;
+  transition: transform 1s;
+  transform: translateY(0%);
+  top: 50;
+  left: 50;
+}
+
+.modalGanador{
+  transform: translateY(-200%);
+}
+
+.imagenGanador{
+  width: 30%;
+}
+
+.mensajeGanador{
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.finJuego{
+  width: 120px;
+  font-size: 15px;
+}
+
+.modalResponsive{
+  opacity: 1;
+  visibility: visible;
+}
+
+.ocultarModal{
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (min-width:600px) and (max-width:901px) {
+
+  .titulo {
+    font-size: 3em;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #imagen{
+    width: 8%;
+    height: 8%;
+  }
+
+  .contenedorp1,
+  .contenedorp2 {
+    width: 35%;
+    height: 80%;
+    font-size: 8px;
+  }
+
+  .puntaje1,
+  .puntaje2 {
+    font-size: 20px;
+  }
+
+  .puntaje1{
+    margin-top:0.9em;
+  }
+
+  .juego {
+    height: 250px;
+    width: 250px;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    padding: 5px;
+  }
+
+.contenedorPrincipal{
+  height: 330px;
+  margin-top: 20px;
+}
+  .contenedorp1 {
+    margin-left: 4em;
+  }
+
+  .bordes {
+    font-size: 30px;
+   line-height: 70px;
+  }
+
+  .piedejuego{
+   margin-left: 1em;   
+  }
+
+  .notificacion{
+    font-size: 25px;
+    margin-top: 10px;
+  }
+
+.reiniciar,
+.nuevoJuego {
+  padding: 2px 10px;
+  font-size: 15px;
+}
+
+.container, .notificacion{
+  position: relative;
+  right: 6%;
+}
+
+.notificacion{
+  position: relative;
+  left: 10%;
+  font-size: 23px;
+}
+
+.win{
+  height: 70%;
+  margin: 0;
+}
+
+.tituloInicio{
+  font-size: 30px;
+}
+#imagen, .tituloInicio{
+  display: inline-block;
+}
+.instrucciones{
+  font-size: 1em;
+  font-weight: bold;
+  color: wheat;
+  width: 60%;
+  text-align:justify ;
+}
+
+.botonInicio{
+  width: 60%;
+  height: 60%;
+  border: 3px solid rgb(69, 3, 99);
+}
+
+.mensajeGanador{
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+}
+
+@media (max-width:601px){
+
+  .titulo {
+    font-size: 2em;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #imagen {
+    width: 10%;
+    height: 10%;
+  }
+
+.container{
+  height: 55%;
+}
+
+  .contenedorp1,
+  .contenedorp2 {
+    width: 30%;
+    height: 20%;
+    font-size: 6px;
+    position: absolute;
+    top: 57%;
+  }
+
+  .contenedorp1{
+    position: absolute;
+    left: 10%;
+  }
+
+  .contenedorp2{
+    position: absolute;
+    left: 53%;
+  }
+
+  .imagenJugador{
+    display: none;
+  }
+
+  .puntaje1,
+  .puntaje2 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .juego {
+    height: 210px;
+    width: 210px;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    padding: 5px;
+    margin-left: 2.8em;
+  }
+
+.contenedorPrincipal{
+  height: 420px;
+}
+
+  .bordes {
+    font-size: 20px;
+   line-height: 55px;
+   font-weight: bold;
+  }
+
+.datosnum{
+  font-size: 25px;
+  margin-top: -10px;
+}
+
+  .notificacion{
+    font-size: 20px;
+    margin-top: 6px;
+  }
+
+.reiniciar,
+.nuevoJuego {
+  padding: 2px 10px;
+  font-size: 15px;
+}
+
+
+.tituloInicio{
+  font-size: 20px;
+}
+#imagen, .tituloInicio{
+  display: inline-block;
+}
+.instrucciones{
+  font-size: 1em;
+  font-weight: bold;
+  color: wheat;
+  width: 90%;
+  text-align:justify ;
+}
+
+.botonInicio{
+  width: 40%;
+  height: 40%;
+  border: 3px solid rgb(69, 3, 99);
+}
+.mensajeGanador{
+  font-size: 20px;
+}
+
+.modalJ{
+  height: 50%;
+}
+
+}
