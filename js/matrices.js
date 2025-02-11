@@ -268,6 +268,5 @@ function nuevoJuego() {
   reinicioPuntos1.innerText = 0;
   reinicioPuntos2.innerText = 0;
  
-  const modalConteiner = document.querySelectorAll(".animacion")[0];
   modalConteiner.classList.remove("ocultarModal");
   };
