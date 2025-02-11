@@ -14,6 +14,7 @@
 
 body {
   background: linear-gradient(90deg, rgb(98, 0, 255), rgb(0, 195, 255));
+  height: min-content;
 }
 
 .container {
