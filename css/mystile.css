@@ -250,7 +250,7 @@ visibility: hidden;
   visibility: hidden;
 }
 
-@media (min-width:600px) and (max-width:901px) {
+@media (min-width:600px) and (max-width:991px) {
 
   .titulo {
     font-size: 3em;
@@ -292,9 +292,6 @@ visibility: hidden;
   height: 330px;
   margin-top: 20px;
 }
-  .contenedorp1 {
-    margin-left: 4em;
-  }
 
   .bordes {
     font-size: 30px;
@@ -316,14 +313,15 @@ visibility: hidden;
   font-size: 15px;
 }
 
-.container, .notificacion{
+.container{
   position: relative;
-  right: 6%;
+  left: 4%;
+  width: 23%;
 }
 
 .notificacion{
   position: relative;
-  left: 10%;
+  right: 6%;
   font-size: 23px;
 }
 
@@ -383,7 +381,7 @@ visibility: hidden;
     height: 20%;
     font-size: 6px;
     position: absolute;
-    top: 57%;
+    top: 54%;
   }
 
   .contenedorp1{
