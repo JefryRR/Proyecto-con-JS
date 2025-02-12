@@ -326,8 +326,13 @@ visibility: hidden;
 }
 
 .win{
-  height: 70%;
-  margin: 0;
+  height: 20%;
+  margin:0;
+  width: 60%;
+}
+
+.puntaje2{
+  margin-top: 0;
 }
 
 .tituloInicio{
